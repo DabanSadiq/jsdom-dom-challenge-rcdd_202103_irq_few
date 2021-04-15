@@ -16,7 +16,7 @@ let timer ='g';
         const t = parseInt(counter.innerText) -1;
         counter.innerText =t;
 
-    
+
     })
     plus.addEventListener('click',()=>{
 
@@ -24,12 +24,12 @@ let timer ='g';
         counter.innerText =t;
     })
     const likeCount = [0];
-    
-    
+
+
     heart.addEventListener('click',()=>{
 
         const a =parseInt (counter.innerText)
-        
+
         if (typeof likeCount[a] !== 'undefined'){
 
             likeCount[a] +=1
@@ -40,28 +40,28 @@ let timer ='g';
         ul.append(commnet)
         }
         else{
-        
-            
+
+
         const b = 0
         const c = b+1;
         likeCount[a] =c
-        
+
         const ul = document.querySelector('.likes')
         const commnet=document.createElement('p')
         commnet.id = `list${a}`
         commnet.innerHTML= `Number ${counter.innerText} has been liked like count ${likeCount[a]}`
         ul.append(commnet)
-        
+
         }
-        
-        
-        
+
+
+
     })
 
 
         let time =setInterval(startTimer, 1000)
 
-    
+
 
     function startTimer (){
         const t = parseInt(counter.innerText) +1;
@@ -70,8 +70,8 @@ let timer ='g';
     }
 
     pause.addEventListener('click',()=>{
-    
-        
+
+
 
         if (timer == null) {
 
@@ -93,7 +93,7 @@ let timer ='g';
 
         }
 
-    
+
 
     })
 
